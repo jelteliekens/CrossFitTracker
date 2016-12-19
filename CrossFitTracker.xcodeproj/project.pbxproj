@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFFF0A7F1E07E8B40021781A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF0A7E1E07E8B40021781A /* AppDelegate.swift */; };
+		EFFF0A811E07E8B40021781A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF0A801E07E8B40021781A /* ViewController.swift */; };
+		EFFF0A841E07E8B40021781A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A821E07E8B40021781A /* Main.storyboard */; };
+		EFFF0A861E07E8B40021781A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A851E07E8B40021781A /* Assets.xcassets */; };
+		EFFF0A891E07E8B40021781A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */; };
+		EFFF0A941E07E8B40021781A /* CrossFitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF0A931E07E8B40021781A /* CrossFitTrackerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFFF0A901E07E8B40021781A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFFF0A731E07E8B40021781A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFFF0A7A1E07E8B40021781A;
+			remoteInfo = CrossFitTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFFF0A7B1E07E8B40021781A /* CrossFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFFF0A7E1E07E8B40021781A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFFF0A801E07E8B40021781A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFFF0A831E07E8B40021781A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFFF0A851E07E8B40021781A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFFF0A881E07E8B40021781A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFFF0A8A1E07E8B40021781A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFFF0A8F1E07E8B40021781A /* CrossFitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossFitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFFF0A931E07E8B40021781A /* CrossFitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossFitTrackerTests.swift; sourceTree = "<group>"; };
+		EFFF0A951E07E8B40021781A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFFF0A781E07E8B40021781A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFFF0A8C1E07E8B40021781A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFFF0A721E07E8B40021781A = {
+			isa = PBXGroup;
+			children = (
+				EFFF0A7D1E07E8B40021781A /* CrossFitTracker */,
+				EFFF0A921E07E8B40021781A /* CrossFitTrackerTests */,
+				EFFF0A7C1E07E8B40021781A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFFF0A7C1E07E8B40021781A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF0A7B1E07E8B40021781A /* CrossFitTracker.app */,
+				EFFF0A8F1E07E8B40021781A /* CrossFitTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFFF0A7D1E07E8B40021781A /* CrossFitTracker */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF0A7E1E07E8B40021781A /* AppDelegate.swift */,
+				EFFF0A801E07E8B40021781A /* ViewController.swift */,
+				EFFF0A821E07E8B40021781A /* Main.storyboard */,
+				EFFF0A851E07E8B40021781A /* Assets.xcassets */,
+				EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */,
+				EFFF0A8A1E07E8B40021781A /* Info.plist */,
+			);
+			path = CrossFitTracker;
+			sourceTree = "<group>";
+		};
+		EFFF0A921E07E8B40021781A /* CrossFitTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF0A931E07E8B40021781A /* CrossFitTrackerTests.swift */,
+				EFFF0A951E07E8B40021781A /* Info.plist */,
+			);
+			path = CrossFitTrackerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFFF0A7A1E07E8B40021781A /* CrossFitTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFFF0A981E07E8B40021781A /* Build configuration list for PBXNativeTarget "CrossFitTracker" */;
+			buildPhases = (
+				EFFF0A771E07E8B40021781A /* Sources */,
+				EFFF0A781E07E8B40021781A /* Frameworks */,
+				EFFF0A791E07E8B40021781A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrossFitTracker;
+			productName = CrossFitTracker;
+			productReference = EFFF0A7B1E07E8B40021781A /* CrossFitTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFFF0A8E1E07E8B40021781A /* CrossFitTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFFF0A9B1E07E8B40021781A /* Build configuration list for PBXNativeTarget "CrossFitTrackerTests" */;
+			buildPhases = (
+				EFFF0A8B1E07E8B40021781A /* Sources */,
+				EFFF0A8C1E07E8B40021781A /* Frameworks */,
+				EFFF0A8D1E07E8B40021781A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFFF0A911E07E8B40021781A /* PBXTargetDependency */,
+			);
+			name = CrossFitTrackerTests;
+			productName = CrossFitTrackerTests;
+			productReference = EFFF0A8F1E07E8B40021781A /* CrossFitTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFFF0A731E07E8B40021781A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Jelte Liekens";
+				TargetAttributes = {
+					EFFF0A7A1E07E8B40021781A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 8V29E5BASS;
+						ProvisioningStyle = Automatic;
+					};
+					EFFF0A8E1E07E8B40021781A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 8V29E5BASS;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFFF0A7A1E07E8B40021781A;
+					};
+				};
+			};
+			buildConfigurationList = EFFF0A761E07E8B40021781A /* Build configuration list for PBXProject "CrossFitTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFFF0A721E07E8B40021781A;
+			productRefGroup = EFFF0A7C1E07E8B40021781A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFFF0A7A1E07E8B40021781A /* CrossFitTracker */,
+				EFFF0A8E1E07E8B40021781A /* CrossFitTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFFF0A791E07E8B40021781A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFFF0A891E07E8B40021781A /* LaunchScreen.storyboard in Resources */,
+				EFFF0A861E07E8B40021781A /* Assets.xcassets in Resources */,
+				EFFF0A841E07E8B40021781A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFFF0A8D1E07E8B40021781A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFFF0A771E07E8B40021781A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFFF0A811E07E8B40021781A /* ViewController.swift in Sources */,
+				EFFF0A7F1E07E8B40021781A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFFF0A8B1E07E8B40021781A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFFF0A941E07E8B40021781A /* CrossFitTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFFF0A911E07E8B40021781A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFFF0A7A1E07E8B40021781A /* CrossFitTracker */;
+			targetProxy = EFFF0A901E07E8B40021781A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFFF0A821E07E8B40021781A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFFF0A831E07E8B40021781A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFFF0A881E07E8B40021781A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFFF0A961E07E8B40021781A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFFF0A971E07E8B40021781A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFFF0A991E07E8B40021781A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8V29E5BASS;
+				INFOPLIST_FILE = CrossFitTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.jelteliekens.CrossFitTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EFFF0A9A1E07E8B40021781A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8V29E5BASS;
+				INFOPLIST_FILE = CrossFitTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.jelteliekens.CrossFitTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EFFF0A9C1E07E8B40021781A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8V29E5BASS;
+				INFOPLIST_FILE = CrossFitTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.jelteliekens.CrossFitTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossFitTracker.app/CrossFitTracker";
+			};
+			name = Debug;
+		};
+		EFFF0A9D1E07E8B40021781A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8V29E5BASS;
+				INFOPLIST_FILE = CrossFitTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.jelteliekens.CrossFitTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrossFitTracker.app/CrossFitTracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFFF0A761E07E8B40021781A /* Build configuration list for PBXProject "CrossFitTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFFF0A961E07E8B40021781A /* Debug */,
+				EFFF0A971E07E8B40021781A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFFF0A981E07E8B40021781A /* Build configuration list for PBXNativeTarget "CrossFitTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFFF0A991E07E8B40021781A /* Debug */,
+				EFFF0A9A1E07E8B40021781A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EFFF0A9B1E07E8B40021781A /* Build configuration list for PBXNativeTarget "CrossFitTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFFF0A9C1E07E8B40021781A /* Debug */,
+				EFFF0A9D1E07E8B40021781A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFFF0A731E07E8B40021781A /* Project object */;
+}
