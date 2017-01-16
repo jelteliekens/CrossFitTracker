@@ -11,9 +11,9 @@
 		A4A3A76E3CC6A38E1C5C13AF /* Pods_CrossFitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0A661B2850D04B21A9ED4B /* Pods_CrossFitTracker.framework */; };
 		EF062D3F1E2D416A00395CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D3D1E2D416A00395CFB /* AppDelegate.swift */; };
 		EF062D401E2D416B00395CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D3E1E2D416A00395CFB /* ViewController.swift */; };
-		EFFF0A841E07E8B40021781A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A821E07E8B40021781A /* Main.storyboard */; };
+		EF062D461E2D42F900395CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF062D421E2D42F900395CFB /* LaunchScreen.storyboard */; };
+		EF062D471E2D42F900395CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF062D441E2D42F900395CFB /* Main.storyboard */; };
 		EFFF0A861E07E8B40021781A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A851E07E8B40021781A /* Assets.xcassets */; };
-		EFFF0A891E07E8B40021781A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */; };
 		EFFF0A941E07E8B40021781A /* CrossFitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF0A931E07E8B40021781A /* CrossFitTrackerTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +36,10 @@
 		E326CE21B1F4F0015E3C4683 /* Pods-CrossFitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossFitTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossFitTracker/Pods-CrossFitTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		EF062D3D1E2D416A00395CFB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF062D3E1E2D416A00395CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF062D431E2D42F900395CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF062D451E2D42F900395CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFFF0A7B1E07E8B40021781A /* CrossFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFFF0A831E07E8B40021781A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFFF0A851E07E8B40021781A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EFFF0A881E07E8B40021781A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFFF0A8A1E07E8B40021781A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFFF0A8F1E07E8B40021781A /* CrossFitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossFitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFF0A931E07E8B40021781A /* CrossFitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossFitTrackerTests.swift; sourceTree = "<group>"; };
@@ -98,6 +98,8 @@
 			children = (
 				EF062D3D1E2D416A00395CFB /* AppDelegate.swift */,
 				EF062D3E1E2D416A00395CFB /* ViewController.swift */,
+				EF062D421E2D42F900395CFB /* LaunchScreen.storyboard */,
+				EF062D441E2D42F900395CFB /* Main.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -127,9 +129,7 @@
 			children = (
 				EF062D3A1E2D406800395CFB /* Core */,
 				EF062D3C1E2D416A00395CFB /* App */,
-				EFFF0A821E07E8B40021781A /* Main.storyboard */,
 				EFFF0A851E07E8B40021781A /* Assets.xcassets */,
-				EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */,
 				EFFF0A8A1E07E8B40021781A /* Info.plist */,
 			);
 			path = CrossFitTracker;
@@ -235,9 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFFF0A891E07E8B40021781A /* LaunchScreen.storyboard in Resources */,
+				EF062D471E2D42F900395CFB /* Main.storyboard in Resources */,
 				EFFF0A861E07E8B40021781A /* Assets.xcassets in Resources */,
-				EFFF0A841E07E8B40021781A /* Main.storyboard in Resources */,
+				EF062D461E2D42F900395CFB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,20 +372,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EFFF0A821E07E8B40021781A /* Main.storyboard */ = {
+		EF062D421E2D42F900395CFB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EFFF0A831E07E8B40021781A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EFFF0A881E07E8B40021781A /* Base */,
+				EF062D431E2D42F900395CFB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EF062D441E2D42F900395CFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF062D451E2D42F900395CFB /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
