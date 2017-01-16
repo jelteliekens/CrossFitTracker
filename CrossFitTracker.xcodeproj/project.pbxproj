@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EFFF0A7F1E07E8B40021781A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF0A7E1E07E8B40021781A /* AppDelegate.swift */; };
-		EFFF0A811E07E8B40021781A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF0A801E07E8B40021781A /* ViewController.swift */; };
+		1A9633F693F4C80B13DA0784 /* Pods_CrossFitTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF6FBBD047EB16584207306 /* Pods_CrossFitTrackerTests.framework */; };
+		A4A3A76E3CC6A38E1C5C13AF /* Pods_CrossFitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0A661B2850D04B21A9ED4B /* Pods_CrossFitTracker.framework */; };
+		EF062D3F1E2D416A00395CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D3D1E2D416A00395CFB /* AppDelegate.swift */; };
+		EF062D401E2D416B00395CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D3E1E2D416A00395CFB /* ViewController.swift */; };
 		EFFF0A841E07E8B40021781A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A821E07E8B40021781A /* Main.storyboard */; };
 		EFFF0A861E07E8B40021781A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A851E07E8B40021781A /* Assets.xcassets */; };
 		EFFF0A891E07E8B40021781A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */; };
@@ -26,9 +28,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54BD09379D24377B2C538C09 /* Pods-CrossFitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossFitTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossFitTracker/Pods-CrossFitTracker.release.xcconfig"; sourceTree = "<group>"; };
+		89FFF34196B7A0567B081C87 /* Pods-CrossFitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossFitTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossFitTrackerTests/Pods-CrossFitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FF6FBBD047EB16584207306 /* Pods_CrossFitTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossFitTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0A661B2850D04B21A9ED4B /* Pods_CrossFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D213AE405503FE7517F019 /* Pods-CrossFitTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossFitTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossFitTrackerTests/Pods-CrossFitTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E326CE21B1F4F0015E3C4683 /* Pods-CrossFitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossFitTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossFitTracker/Pods-CrossFitTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		EF062D3D1E2D416A00395CFB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF062D3E1E2D416A00395CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFFF0A7B1E07E8B40021781A /* CrossFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFFF0A7E1E07E8B40021781A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFFF0A801E07E8B40021781A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFFF0A831E07E8B40021781A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFFF0A851E07E8B40021781A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFFF0A881E07E8B40021781A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A3A76E3CC6A38E1C5C13AF /* Pods_CrossFitTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9633F693F4C80B13DA0784 /* Pods_CrossFitTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0500E6D4B665E195BA8CC419 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E326CE21B1F4F0015E3C4683 /* Pods-CrossFitTracker.debug.xcconfig */,
+				54BD09379D24377B2C538C09 /* Pods-CrossFitTracker.release.xcconfig */,
+				89FFF34196B7A0567B081C87 /* Pods-CrossFitTrackerTests.debug.xcconfig */,
+				D4D213AE405503FE7517F019 /* Pods-CrossFitTrackerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE34D145A1AFF8717BDE47EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A661B2850D04B21A9ED4B /* Pods_CrossFitTracker.framework */,
+				9FF6FBBD047EB16584207306 /* Pods_CrossFitTrackerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF062D3A1E2D406800395CFB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EF062D3C1E2D416A00395CFB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF062D3D1E2D416A00395CFB /* AppDelegate.swift */,
+				EF062D3E1E2D416A00395CFB /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		EFFF0A721E07E8B40021781A = {
 			isa = PBXGroup;
 			children = (
 				EFFF0A7D1E07E8B40021781A /* CrossFitTracker */,
 				EFFF0A921E07E8B40021781A /* CrossFitTrackerTests */,
 				EFFF0A7C1E07E8B40021781A /* Products */,
+				0500E6D4B665E195BA8CC419 /* Pods */,
+				EE34D145A1AFF8717BDE47EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +125,8 @@
 		EFFF0A7D1E07E8B40021781A /* CrossFitTracker */ = {
 			isa = PBXGroup;
 			children = (
-				EFFF0A7E1E07E8B40021781A /* AppDelegate.swift */,
-				EFFF0A801E07E8B40021781A /* ViewController.swift */,
+				EF062D3A1E2D406800395CFB /* Core */,
+				EF062D3C1E2D416A00395CFB /* App */,
 				EFFF0A821E07E8B40021781A /* Main.storyboard */,
 				EFFF0A851E07E8B40021781A /* Assets.xcassets */,
 				EFFF0A871E07E8B40021781A /* LaunchScreen.storyboard */,
@@ -103,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFFF0A981E07E8B40021781A /* Build configuration list for PBXNativeTarget "CrossFitTracker" */;
 			buildPhases = (
+				BB333D4469C6E96CB32DA98D /* [CP] Check Pods Manifest.lock */,
 				EFFF0A771E07E8B40021781A /* Sources */,
 				EFFF0A781E07E8B40021781A /* Frameworks */,
 				EFFF0A791E07E8B40021781A /* Resources */,
+				A0E13EB96F92071F615308C4 /* [CP] Embed Pods Frameworks */,
+				5B307B462E46D3F07D0C231F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFFF0A9B1E07E8B40021781A /* Build configuration list for PBXNativeTarget "CrossFitTrackerTests" */;
 			buildPhases = (
+				1ED097CDA7D2CE78318FFE1A /* [CP] Check Pods Manifest.lock */,
 				EFFF0A8B1E07E8B40021781A /* Sources */,
 				EFFF0A8C1E07E8B40021781A /* Frameworks */,
 				EFFF0A8D1E07E8B40021781A /* Resources */,
+				8C3304D84281C356E90E0102 /* [CP] Embed Pods Frameworks */,
+				7DCE9012203290361D6CBC9A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,13 +250,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1ED097CDA7D2CE78318FFE1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B307B462E46D3F07D0C231F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossFitTracker/Pods-CrossFitTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DCE9012203290361D6CBC9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossFitTrackerTests/Pods-CrossFitTrackerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C3304D84281C356E90E0102 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossFitTrackerTests/Pods-CrossFitTrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0E13EB96F92071F615308C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossFitTracker/Pods-CrossFitTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB333D4469C6E96CB32DA98D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EFFF0A771E07E8B40021781A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFFF0A811E07E8B40021781A /* ViewController.swift in Sources */,
-				EFFF0A7F1E07E8B40021781A /* AppDelegate.swift in Sources */,
+				EF062D401E2D416B00395CFB /* ViewController.swift in Sources */,
+				EF062D3F1E2D416A00395CFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +484,9 @@
 		};
 		EFFF0A991E07E8B40021781A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E326CE21B1F4F0015E3C4683 /* Pods-CrossFitTracker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8V29E5BASS;
 				INFOPLIST_FILE = CrossFitTracker/Info.plist;
@@ -350,7 +499,9 @@
 		};
 		EFFF0A9A1E07E8B40021781A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54BD09379D24377B2C538C09 /* Pods-CrossFitTracker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8V29E5BASS;
 				INFOPLIST_FILE = CrossFitTracker/Info.plist;
@@ -363,6 +514,7 @@
 		};
 		EFFF0A9C1E07E8B40021781A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FFF34196B7A0567B081C87 /* Pods-CrossFitTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -378,6 +530,7 @@
 		};
 		EFFF0A9D1E07E8B40021781A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4D213AE405503FE7517F019 /* Pods-CrossFitTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +563,7 @@
 				EFFF0A9A1E07E8B40021781A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFFF0A9B1E07E8B40021781A /* Build configuration list for PBXNativeTarget "CrossFitTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +572,7 @@
 				EFFF0A9D1E07E8B40021781A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
