@@ -10,9 +10,24 @@
 		1A9633F693F4C80B13DA0784 /* Pods_CrossFitTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF6FBBD047EB16584207306 /* Pods_CrossFitTrackerTests.framework */; };
 		A4A3A76E3CC6A38E1C5C13AF /* Pods_CrossFitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0A661B2850D04B21A9ED4B /* Pods_CrossFitTracker.framework */; };
 		EF062D3F1E2D416A00395CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D3D1E2D416A00395CFB /* AppDelegate.swift */; };
-		EF062D401E2D416B00395CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D3E1E2D416A00395CFB /* ViewController.swift */; };
 		EF062D461E2D42F900395CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF062D421E2D42F900395CFB /* LaunchScreen.storyboard */; };
 		EF062D471E2D42F900395CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF062D441E2D42F900395CFB /* Main.storyboard */; };
+		EF062D561E2D454300395CFB /* Movement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D541E2D454300395CFB /* Movement+CoreDataClass.swift */; };
+		EF062D571E2D454300395CFB /* Movement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D551E2D454300395CFB /* Movement+CoreDataProperties.swift */; };
+		EF062D591E2D47B300395CFB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF062D581E2D47B300395CFB /* CoreDataStack.swift */; };
+		EF8660501E4F19550020A748 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF86604F1E4F19550020A748 /* ViewModel.swift */; };
+		EF9FA6431E4E2F6300CD5F95 /* MovementOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA6421E4E2F6300CD5F95 /* MovementOverviewViewController.swift */; };
+		EF9FA6461E4E389A00CD5F95 /* MovementOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA6451E4E389A00CD5F95 /* MovementOverviewViewModel.swift */; };
+		EF9FA64A1E4E394B00CD5F95 /* CreateMovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA6491E4E394B00CD5F95 /* CreateMovementViewController.swift */; };
+		EF9FA64C1E4E399600CD5F95 /* CreateMovementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA64B1E4E399600CD5F95 /* CreateMovementViewModel.swift */; };
+		EFF235BB1E51C23800E375D2 /* MovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF235BA1E51C23800E375D2 /* MovementService.swift */; };
+		EFF235BD1E51C36000E375D2 /* MovementStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF235BC1E51C36000E375D2 /* MovementStorage.swift */; };
+		EFF235C11E51C63400E375D2 /* ViewModelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF235C01E51C63400E375D2 /* ViewModelServices.swift */; };
+		EFF235C31E51C64800E375D2 /* ViewModelServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF235C21E51C64800E375D2 /* ViewModelServicesProtocol.swift */; };
+		EFF235C61E51C74600E375D2 /* CrossFitTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFF235C41E51C74600E375D2 /* CrossFitTracker.xcdatamodeld */; };
+		EFF235C81E51C7F700E375D2 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF235C71E51C7F700E375D2 /* ViewModelProtocol.swift */; };
+		EFF235CB1E51D78000E375D2 /* MovementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF235CA1E51D78000E375D2 /* MovementCell.swift */; };
+		EFF235CD1E51D7FB00E375D2 /* MovementFetchedResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF235CC1E51D7FB00E375D2 /* MovementFetchedResultController.swift */; };
 		EFFF0A861E07E8B40021781A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFF0A851E07E8B40021781A /* Assets.xcassets */; };
 		EFFF0A941E07E8B40021781A /* CrossFitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF0A931E07E8B40021781A /* CrossFitTrackerTests.swift */; };
 /* End PBXBuildFile section */
@@ -35,9 +50,24 @@
 		D4D213AE405503FE7517F019 /* Pods-CrossFitTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossFitTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossFitTrackerTests/Pods-CrossFitTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E326CE21B1F4F0015E3C4683 /* Pods-CrossFitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossFitTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossFitTracker/Pods-CrossFitTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		EF062D3D1E2D416A00395CFB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF062D3E1E2D416A00395CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF062D431E2D42F900395CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF062D451E2D42F900395CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF062D541E2D454300395CFB /* Movement+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EF062D551E2D454300395CFB /* Movement+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movement+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EF062D581E2D47B300395CFB /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EF86604F1E4F19550020A748 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EF9FA6421E4E2F6300CD5F95 /* MovementOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementOverviewViewController.swift; sourceTree = "<group>"; };
+		EF9FA6451E4E389A00CD5F95 /* MovementOverviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementOverviewViewModel.swift; sourceTree = "<group>"; };
+		EF9FA6491E4E394B00CD5F95 /* CreateMovementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMovementViewController.swift; sourceTree = "<group>"; };
+		EF9FA64B1E4E399600CD5F95 /* CreateMovementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMovementViewModel.swift; sourceTree = "<group>"; };
+		EFF235BA1E51C23800E375D2 /* MovementService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementService.swift; sourceTree = "<group>"; };
+		EFF235BC1E51C36000E375D2 /* MovementStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementStorage.swift; sourceTree = "<group>"; };
+		EFF235C01E51C63400E375D2 /* ViewModelServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelServices.swift; sourceTree = "<group>"; };
+		EFF235C21E51C64800E375D2 /* ViewModelServicesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelServicesProtocol.swift; sourceTree = "<group>"; };
+		EFF235C51E51C74600E375D2 /* CrossFitTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrossFitTracker.xcdatamodel; sourceTree = "<group>"; };
+		EFF235C71E51C7F700E375D2 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		EFF235CA1E51D78000E375D2 /* MovementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementCell.swift; sourceTree = "<group>"; };
+		EFF235CC1E51D7FB00E375D2 /* MovementFetchedResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementFetchedResultController.swift; sourceTree = "<group>"; };
 		EFFF0A7B1E07E8B40021781A /* CrossFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFF0A851E07E8B40021781A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFFF0A8A1E07E8B40021781A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +119,10 @@
 		EF062D3A1E2D406800395CFB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EF062D581E2D47B300395CFB /* CoreDataStack.swift */,
+				EFF235BF1E51C61600E375D2 /* Protocols */,
+				EFF235BE1E51C60B00E375D2 /* Impl */,
+				EF86604E1E4F19480020A748 /* BaseClasses */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -97,11 +131,86 @@
 			isa = PBXGroup;
 			children = (
 				EF062D3D1E2D416A00395CFB /* AppDelegate.swift */,
-				EF062D3E1E2D416A00395CFB /* ViewController.swift */,
+				EF9FA6481E4E392200CD5F95 /* CreateMovement */,
+				EF9FA6411E4E2F1500CD5F95 /* MovementOverview */,
 				EF062D421E2D42F900395CFB /* LaunchScreen.storyboard */,
 				EF062D441E2D42F900395CFB /* Main.storyboard */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		EF062D481E2D432800395CFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF86604D1E4F15700020A748 /* Movement */,
+				EFF235C41E51C74600E375D2 /* CrossFitTracker.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF86604D1E4F15700020A748 /* Movement */ = {
+			isa = PBXGroup;
+			children = (
+				EFF235BA1E51C23800E375D2 /* MovementService.swift */,
+				EFF235BC1E51C36000E375D2 /* MovementStorage.swift */,
+				EF062D551E2D454300395CFB /* Movement+CoreDataProperties.swift */,
+				EF062D541E2D454300395CFB /* Movement+CoreDataClass.swift */,
+			);
+			path = Movement;
+			sourceTree = "<group>";
+		};
+		EF86604E1E4F19480020A748 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				EF86604F1E4F19550020A748 /* ViewModel.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		EF9FA6411E4E2F1500CD5F95 /* MovementOverview */ = {
+			isa = PBXGroup;
+			children = (
+				EFF235CC1E51D7FB00E375D2 /* MovementFetchedResultController.swift */,
+				EF9FA6421E4E2F6300CD5F95 /* MovementOverviewViewController.swift */,
+				EF9FA6451E4E389A00CD5F95 /* MovementOverviewViewModel.swift */,
+				EFF235C91E51D76300E375D2 /* MovementCell */,
+			);
+			path = MovementOverview;
+			sourceTree = "<group>";
+		};
+		EF9FA6481E4E392200CD5F95 /* CreateMovement */ = {
+			isa = PBXGroup;
+			children = (
+				EF9FA6491E4E394B00CD5F95 /* CreateMovementViewController.swift */,
+				EF9FA64B1E4E399600CD5F95 /* CreateMovementViewModel.swift */,
+			);
+			path = CreateMovement;
+			sourceTree = "<group>";
+		};
+		EFF235BE1E51C60B00E375D2 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				EFF235C01E51C63400E375D2 /* ViewModelServices.swift */,
+			);
+			name = Impl;
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		EFF235BF1E51C61600E375D2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EFF235C21E51C64800E375D2 /* ViewModelServicesProtocol.swift */,
+				EFF235C71E51C7F700E375D2 /* ViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EFF235C91E51D76300E375D2 /* MovementCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFF235CA1E51D78000E375D2 /* MovementCell.swift */,
+			);
+			path = MovementCell;
 			sourceTree = "<group>";
 		};
 		EFFF0A721E07E8B40021781A = {
@@ -128,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				EF062D3A1E2D406800395CFB /* Core */,
+				EF062D481E2D432800395CFB /* Model */,
 				EF062D3C1E2D416A00395CFB /* App */,
 				EFFF0A851E07E8B40021781A /* Assets.xcassets */,
 				EFFF0A8A1E07E8B40021781A /* Info.plist */,
@@ -157,6 +267,7 @@
 				EFFF0A791E07E8B40021781A /* Resources */,
 				A0E13EB96F92071F615308C4 /* [CP] Embed Pods Frameworks */,
 				5B307B462E46D3F07D0C231F /* [CP] Copy Pods Resources */,
+				EF9FA6441E4E319C00CD5F95 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -341,6 +452,20 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		EF9FA6441E4E319C00CD5F95 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -348,8 +473,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF062D401E2D416B00395CFB /* ViewController.swift in Sources */,
+				EF8660501E4F19550020A748 /* ViewModel.swift in Sources */,
+				EF9FA64C1E4E399600CD5F95 /* CreateMovementViewModel.swift in Sources */,
+				EF9FA6461E4E389A00CD5F95 /* MovementOverviewViewModel.swift in Sources */,
+				EF062D571E2D454300395CFB /* Movement+CoreDataProperties.swift in Sources */,
+				EFF235C31E51C64800E375D2 /* ViewModelServicesProtocol.swift in Sources */,
+				EFF235BD1E51C36000E375D2 /* MovementStorage.swift in Sources */,
 				EF062D3F1E2D416A00395CFB /* AppDelegate.swift in Sources */,
+				EF062D591E2D47B300395CFB /* CoreDataStack.swift in Sources */,
+				EFF235CB1E51D78000E375D2 /* MovementCell.swift in Sources */,
+				EFF235BB1E51C23800E375D2 /* MovementService.swift in Sources */,
+				EF062D561E2D454300395CFB /* Movement+CoreDataClass.swift in Sources */,
+				EFF235C61E51C74600E375D2 /* CrossFitTracker.xcdatamodeld in Sources */,
+				EFF235C81E51C7F700E375D2 /* ViewModelProtocol.swift in Sources */,
+				EFF235CD1E51D7FB00E375D2 /* MovementFetchedResultController.swift in Sources */,
+				EFF235C11E51C63400E375D2 /* ViewModelServices.swift in Sources */,
+				EF9FA6431E4E2F6300CD5F95 /* MovementOverviewViewController.swift in Sources */,
+				EF9FA64A1E4E394B00CD5F95 /* CreateMovementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +715,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EFF235C41E51C74600E375D2 /* CrossFitTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EFF235C51E51C74600E375D2 /* CrossFitTracker.xcdatamodel */,
+			);
+			currentVersion = EFF235C51E51C74600E375D2 /* CrossFitTracker.xcdatamodel */;
+			path = CrossFitTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EFFF0A731E07E8B40021781A /* Project object */;
 }
