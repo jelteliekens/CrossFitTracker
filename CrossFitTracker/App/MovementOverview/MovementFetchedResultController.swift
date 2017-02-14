@@ -21,19 +21,26 @@ public enum PagingListChange {
 public protocol PagingList {
     var changes: Signal<[PagingListChange], NoError> { get }
 
-    func numberOfSections() -> Int
+    var numberOfSections: Int { get }
 
     func numberOfItemsInSection(section: Int) -> Int
+
+    func object(at indexPath: IndexPath) -> Movement
 }
 
 public final class MovementFetchedResultController: NSObject, PagingList {
-    public let (changes, observer) = Signal<[PagingListChange], NoError>.pipe()
 
-    var pagingListChanges = [PagingListChange]()
+    fileprivate let (signal, observer) = Signal<[PagingListChange], NoError>.pipe()
 
-    private let managedContext: NSManagedObjectContext
+    public var changes: Signal<[PagingListChange], NoError> {
+        return signal
+    }
 
-    private lazy var fetchedResultsController: NSFetchedResultsController<Movement> = {
+    fileprivate var pagingListChanges = [PagingListChange]()
+
+    fileprivate let managedContext: NSManagedObjectContext
+
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Movement> = {
         let fetchRequest: NSFetchRequest<Movement> = Movement.fetchRequest()
         let sort = NSSortDescriptor(key: #keyPath(Movement.title), ascending: true)
         fetchRequest.sortDescriptors = [sort]
@@ -50,7 +57,7 @@ public final class MovementFetchedResultController: NSObject, PagingList {
         return fetchedResultsController
     }()
 
-    init(managedContext: NSManagedObjectContext) {
+    public init(managedContext: NSManagedObjectContext) {
         self.managedContext = managedContext
 
         super.init()
@@ -61,8 +68,12 @@ public final class MovementFetchedResultController: NSObject, PagingList {
             print("Fetching error: \(error), \(error.userInfo)")
         }
     }
+}
 
-    public func numberOfSections() -> Int {
+// MARK: - PagingList
+
+extension MovementFetchedResultController {
+    public var numberOfSections: Int {
         guard let sections = fetchedResultsController.sections else {
             return 0
         }
@@ -77,7 +88,13 @@ public final class MovementFetchedResultController: NSObject, PagingList {
 
         return sectionInfo.numberOfObjects
     }
+
+    public func object(at indexPath: IndexPath) -> Movement {
+        return fetchedResultsController.object(at: indexPath) as Movement
+    }
 }
+
+// MARK: - NSFetchedResultsControllerDelegate
 
 extension MovementFetchedResultController: NSFetchedResultsControllerDelegate {
     public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

@@ -47,12 +47,15 @@ public final class MovementOverviewViewController: UITableViewController {
 extension MovementOverviewViewController {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovementOverviewIdentifier.MovementCell, for: indexPath)
-        cell.textLabel!.text = "Hallo"
+
+        let movement = viewModel.pagingList.object(at: indexPath)
+
+        cell.textLabel!.text = movement.title
         return cell
     }
 
     public override func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.pagingList.numberOfSections()
+        return viewModel.pagingList.numberOfSections
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
