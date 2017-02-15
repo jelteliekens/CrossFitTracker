@@ -13,6 +13,8 @@ import Result
 
 public protocol MovementServiceProtocol {
     func create(name: String) -> SignalProducer<Movement, NoError>
+
+    func delete(movement: Movement) -> SignalProducer<Bool, NoError>
 }
 
 public final class MovementService: MovementServiceProtocol {
@@ -25,10 +27,15 @@ public final class MovementService: MovementServiceProtocol {
     }
 
     public func create(name: String) -> SignalProducer<Movement, NoError> {
-        debugPrint(name)
         let movement = Movement(context: coreDataStack.managedContext)
         movement.title = name
         coreDataStack.saveContext()
         return SignalProducer<Movement, NoError>(value: movement)
+    }
+
+    public func delete(movement: Movement) -> SignalProducer<Bool, NoError> {
+        coreDataStack.managedContext.delete(movement)
+        coreDataStack.saveContext()
+        return SignalProducer<Bool, NoError>(value: true)
     }
 }

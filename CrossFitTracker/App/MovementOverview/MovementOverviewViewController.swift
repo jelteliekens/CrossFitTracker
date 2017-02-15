@@ -41,8 +41,16 @@ public final class MovementOverviewViewController: UITableViewController {
 
                 self.tableView.endUpdates()
         }
+
+        viewModel.close.values
+            .observe(on: UIScheduler())
+            .observeValues { _ in
+                self.dismiss(animated: true, completion: nil)
+            }
     }
 }
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension MovementOverviewViewController {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,6 +69,17 @@ extension MovementOverviewViewController {
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.pagingList.numberOfItemsInSection(section: section)
     }
+
+    public override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    public override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let movement = viewModel.pagingList.object(at: indexPath)
+            viewModel.deleteMovement.apply(movement).start()
+        }
+    }
 }
 
 // MARK: - Segue
@@ -73,6 +92,8 @@ extension MovementOverviewViewController {
             return
         }
 
-        createMovementViewController.viewModel = CreateMovemenViewModel(services: viewModel.services)
+        viewModel.createMovement
+            .apply(createMovementViewController)
+            .start()
     }
 }

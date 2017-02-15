@@ -10,7 +10,7 @@ import Foundation
 import ReactiveSwift
 import Result
 
-public final class CreateMovemenViewModel: ViewModel {
+public final class CreateMovementViewModel: ViewModel {
 
     public let movement = MutableProperty<String>("")
 
@@ -20,7 +20,7 @@ public final class CreateMovemenViewModel: ViewModel {
     public override init(services: ViewModelServicesProtocol) {
         let createEnabled = MutableProperty(false)
 
-        self.create = Action<String, Movement, NoError>(enabledIf: createEnabled) { (movement: String) -> SignalProducer<Movement, NoError> in
+        self.create = Action<String, Movement, NoError>(enabledIf: createEnabled) { (movement) -> SignalProducer<Movement, NoError> in
             return services.movement.create(name: movement)
         }
 
@@ -28,9 +28,9 @@ public final class CreateMovemenViewModel: ViewModel {
             return SignalProducer<(), NoError>(value: ())
         }
 
-        createEnabled <~ self.movement.producer.map({ (movement) -> Bool in
+        createEnabled <~ self.movement.producer.map { (movement) -> Bool in
             return !movement.isEmpty
-        })
+        }
 
         super.init(services: services)
     }

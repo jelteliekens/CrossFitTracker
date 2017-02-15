@@ -17,14 +17,17 @@ public class CreateMovementViewController: UITableViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
 
-    public var viewModel: CreateMovemenViewModel!
+    public var viewModel: CreateMovementViewModel!
 
     public override func viewDidLoad() {
         saveButton.reactive.isEnabled <~ viewModel.create.isEnabled
 
-        viewModel.movement <~ movementTextField.reactive.continuousTextValues.map { (movement) -> String in
-            return movement ?? ""
-        }
+        viewModel.movement <~ movementTextField
+            .reactive
+            .continuousTextValues
+            .map { (movement) -> String in
+                return movement ?? ""
+            }
     }
 
     public override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +54,5 @@ extension CreateMovementViewController {
         viewModel.cancel
             .apply()
             .start()
-
-        dismiss(animated: true)
     }
 }
