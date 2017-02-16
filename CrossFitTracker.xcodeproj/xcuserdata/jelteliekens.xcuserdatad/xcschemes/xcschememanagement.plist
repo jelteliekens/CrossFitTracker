@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CrossFitTracker-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>CrossFitTracker.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EF9BD8761E5609D30075623B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EFFF0A7A1E07E8B40021781A</key>
 		<dict>
 			<key>primary</key>
