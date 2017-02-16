@@ -8,7 +8,14 @@
 
 import Foundation
 
+public protocol ViewModelServicesDelegate: class {
+    func services(_ services: ViewModelServicesProtocol, navigate: NavigationEvent)
+}
+
 public protocol ViewModelServicesProtocol {
     var coreDataStack: CoreDataStack { get }
     var movement: MovementServiceProtocol { get }
+
+    func push(_ viewModel: ViewModelProtocol)
+    func pop(_ viewModel: ViewModelProtocol)
 }

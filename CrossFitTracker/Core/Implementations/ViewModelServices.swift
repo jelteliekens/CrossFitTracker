@@ -13,8 +13,20 @@ public final class ViewModelServices: ViewModelServicesProtocol {
     public let coreDataStack: CoreDataStack
     public let movement: MovementServiceProtocol
 
-    public init(coreDataStack: CoreDataStack, movement: MovementServiceProtocol) {
+    private weak var delegate: ViewModelServicesDelegate?
+
+    public init(delegate: ViewModelServicesDelegate?,
+                coreDataStack: CoreDataStack,
+                movement: MovementServiceProtocol) {
         self.coreDataStack = coreDataStack
         self.movement = movement
+    }
+
+    public func push(_ viewModel: ViewModelProtocol) {
+        delegate?.services(self, navigate: NavigationEvent(viewModel))
+    }
+
+    public func pop(_ viewModel: ViewModelProtocol) {
+        delegate?.services(self, navigate: .Pop)
     }
 }
