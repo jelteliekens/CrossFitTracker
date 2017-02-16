@@ -27,14 +27,14 @@ public final class MovementService: MovementServiceProtocol {
     }
 
     public func create(name: String) -> SignalProducer<Movement, NoError> {
-        let movement = Movement(context: coreDataStack.managedContext)
+        let movement = Movement(context: coreDataStack.mainContext)
         movement.title = name
         coreDataStack.saveContext()
         return SignalProducer<Movement, NoError>(value: movement)
     }
 
     public func delete(movement: Movement) -> SignalProducer<Bool, NoError> {
-        coreDataStack.managedContext.delete(movement)
+        coreDataStack.mainContext.delete(movement)
         coreDataStack.saveContext()
         return SignalProducer<Bool, NoError>(value: true)
     }

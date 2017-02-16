@@ -16,7 +16,7 @@ open class CoreDataStack {
         self.modelName = modelName
     }
 
-    public lazy var managedContext: NSManagedObjectContext = {
+    public lazy var mainContext: NSManagedObjectContext = {
         return self.storeContainer.viewContext
     }()
 
@@ -33,13 +33,46 @@ open class CoreDataStack {
         return container
     }()
 
-    public func saveContext () {
-        guard managedContext.hasChanges else { return }
+    public func newDerivedBackgroundContext() -> NSManagedObjectContext {
+        let context = storeContainer.newBackgroundContext()
+        return context
+    }
 
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            fatalError("Unresolved error \(error), \(error.userInfo)")
+    public func newDerivedMainContext() -> NSManagedObjectContext {
+        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.parent = mainContext
+
+        return context
+    }
+
+    public func saveContext() {
+        saveContext(mainContext)
+    }
+
+    public func saveContext(_ context: NSManagedObjectContext) {
+        if context !== mainContext {
+            saveDerivedContext(context)
+            return
+        }
+
+        context.perform {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
+    }
+
+    public func saveDerivedContext(_ context: NSManagedObjectContext) {
+        context.perform {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+
+            self.saveContext(self.mainContext)
         }
     }
 }

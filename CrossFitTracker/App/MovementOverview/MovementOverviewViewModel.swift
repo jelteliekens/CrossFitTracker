@@ -19,7 +19,7 @@ public final class MovementOverviewViewModel: ViewModel {
     public let close: Action<(), (), NoError>
 
     public override init(services: ViewModelServicesProtocol) {
-        pagingList = MovementFetchedResultController(managedContext: services.coreDataStack.managedContext)
+        pagingList = MovementFetchedResultController(managedContext: services.coreDataStack.mainContext)
 
         self.createMovement = Action<CreateMovementViewController, CreateMovementViewModel, NoError> { createMovementViewController -> SignalProducer<CreateMovementViewModel, NoError> in
             let createMovementViewModel = CreateMovementViewModel(services: services)
