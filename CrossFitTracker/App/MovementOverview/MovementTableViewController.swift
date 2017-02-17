@@ -103,7 +103,7 @@ public final class MovementTableViewController: ReactiveViewController<MovementT
     }
 
     public func createMovementButtonPressed() {
-        viewModel.createMovement
+        viewModel.presentCreateTodo
             .apply()
             .start()
     }

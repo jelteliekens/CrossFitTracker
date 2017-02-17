@@ -25,8 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return CoreDataStack(modelName: "CrossFitTracker")
     }()
 
+    lazy var movementStorage: MovementStorage = {
+        return MovementStorage(coreDataStack: self.coreDataStack)
+    }()
+
     lazy var movementService: MovementServiceProtocol = {
-        return MovementService(coreDataStack: self.coreDataStack)
+        return MovementService(storage: self.movementStorage)
     }()
 
     lazy var services: ViewModelServicesProtocol = {

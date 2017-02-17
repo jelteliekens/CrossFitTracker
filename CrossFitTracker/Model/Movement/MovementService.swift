@@ -12,6 +12,9 @@ import ReactiveSwift
 import Result
 
 public protocol MovementServiceProtocol {
+
+    func getAll() -> SignalProducer<[Movement], NoError>
+
     func create(name: String) -> SignalProducer<Movement, NoError>
 
     func delete(movement: Movement) -> SignalProducer<Bool, NoError>
@@ -19,23 +22,24 @@ public protocol MovementServiceProtocol {
 
 public final class MovementService: MovementServiceProtocol {
 
-    private let coreDataStack: CoreDataStack
-//    private let storage: MovementStorage
+    private let storage: MovementStorageProtocol
 
-    public init(coreDataStack: CoreDataStack) {
-        self.coreDataStack = coreDataStack
+    public init(storage: MovementStorageProtocol) {
+        self.storage = storage
+    }
+
+    public func getAll() -> SignalProducer<[Movement], NoError> {
+        let movements = storage.getAll().map { persisted in
+            Movement(id: Int(persisted.unique), name: persisted.name)
+        }
+
+        return SignalProducer(value: movements)
     }
 
     public func create(name: String) -> SignalProducer<Movement, NoError> {
         let movement = Movement(id: 0, name: name)
 
-        // Begin persisting
-        let context = coreDataStack.newDerivedBackgroundContext()
-        let persisted = PersistedMovement(context: context)
-        persisted.unique = Int32(movement.id)
-        persisted.name = movement.name
-        coreDataStack.saveContext(context)
-        // End persisting
+        storage.create(movement)
 
         return SignalProducer<Movement, NoError>(value: movement)
     }

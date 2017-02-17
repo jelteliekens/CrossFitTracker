@@ -14,14 +14,14 @@ public final class MovementTableViewModel: ViewModel {
 
     public let movements = MutableProperty<[Movement]>([])
 
-    public let createMovement: Action<(), CreateMovementViewModel, NoError>
+    public let presentCreateTodo: Action<(), CreateMovementViewModel, NoError>
     public let deleteMovement: Action<Movement, Bool, NoError>
 
     public let close: Action<(), (), NoError>
 
     public override init(services: ViewModelServicesProtocol) {
 
-        self.createMovement = Action<(), CreateMovementViewModel, NoError> { () -> SignalProducer<CreateMovementViewModel, NoError> in
+        self.presentCreateTodo = Action<(), CreateMovementViewModel, NoError> { () -> SignalProducer<CreateMovementViewModel, NoError> in
             return SignalProducer(value: CreateMovementViewModel(services: services))
         }
 
@@ -35,14 +35,14 @@ public final class MovementTableViewModel: ViewModel {
 
         super.init(services: services)
 
-        self.createMovement.values
+        self.presentCreateTodo.values
             .observeValues(services.push)
 
-        self.createMovement.values
+        self.presentCreateTodo.values
             .flatMap(.latest) { vm in vm.create.values.map { _ in vm } }
             .observeValues(self.services.pop)
 
-        self.createMovement.values
+        self.presentCreateTodo.values
             .flatMap(.latest) { vm in vm.cancel.values.map { _ in vm } }
             .observeValues(self.services.pop)
     }
