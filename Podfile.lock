@@ -5,17 +5,20 @@ PODS:
   - ReactiveSwift (1.0.0):
     - Result (~> 3.1)
   - Result (3.1.0)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - ReactiveCocoa (~> 5.0.0)
+  - SnapKit (~> 3.2.0)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   ReactiveCocoa: 60ef0da915b4f70c34ebecc3f4fb8f96af0e53d6
   ReactiveSwift: f391724ee318a2cfd3e37dfb041cd49ecf4e7869
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 0452fc6eb478f80077a1bd267667f475939b688d
+PODFILE CHECKSUM: 03b83400a6de57d22823f4c05ea730cee3d49bfd
 
 COCOAPODS: 1.1.1

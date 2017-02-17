@@ -7,6 +7,7 @@ target 'CrossFitTracker' do
 
   pod 'ReactiveCocoa', '~> 5.0.0'
   pod 'Alamofire', '~> 4.0'
+  pod 'SnapKit', '~> 3.2.0'
 
   target 'CrossFitTrackerTests' do
     inherit! :search_paths
