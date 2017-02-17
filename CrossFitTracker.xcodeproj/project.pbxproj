@@ -214,9 +214,9 @@
 		EF9FA6411E4E2F1500CD5F95 /* MovementOverview */ = {
 			isa = PBXGroup;
 			children = (
-				EFF235CC1E51D7FB00E375D2 /* MovementFetchedResultController.swift */,
-				EF9FA6421E4E2F6300CD5F95 /* MovementTableViewController.swift */,
 				EF9FA6451E4E389A00CD5F95 /* MovementTableViewModel.swift */,
+				EF9FA6421E4E2F6300CD5F95 /* MovementTableViewController.swift */,
+				EFF235CC1E51D7FB00E375D2 /* MovementFetchedResultController.swift */,
 				EFF235C91E51D76300E375D2 /* MovementCell */,
 			);
 			path = MovementOverview;
@@ -225,8 +225,8 @@
 		EF9FA6481E4E392200CD5F95 /* CreateMovement */ = {
 			isa = PBXGroup;
 			children = (
-				EF9FA6491E4E394B00CD5F95 /* CreateMovementViewController.swift */,
 				EF9FA64B1E4E399600CD5F95 /* CreateMovementViewModel.swift */,
+				EF9FA6491E4E394B00CD5F95 /* CreateMovementViewController.swift */,
 			);
 			path = CreateMovement;
 			sourceTree = "<group>";
