@@ -38,12 +38,12 @@ public final class MovementTableViewModel: ViewModel {
         self.createMovement.values
             .observeValues(services.push)
 
-//        self.createMovement.values
-//            .flatMap(.latest) { vm in vm.create.values.map { _ in vm } }
-//            .observeValues(self.services.pop)
+        self.createMovement.values
+            .flatMap(.latest) { vm in vm.create.values.map { _ in vm } }
+            .observeValues(self.services.pop)
 
-//        self.createMovement.values
-//            .flatMap(.latest) { vm in vm.cancel.values.map { _ in vm } }
-//            .observeValues(self.services.pop)
+        self.createMovement.values
+            .flatMap(.latest) { vm in vm.cancel.values.map { _ in vm } }
+            .observeValues(self.services.pop)
     }
 }
