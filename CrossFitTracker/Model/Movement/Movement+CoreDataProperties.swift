@@ -17,5 +17,4 @@ extension Movement {
 
     @NSManaged public var image: String?
     @NSManaged public var title: String
-
 }
