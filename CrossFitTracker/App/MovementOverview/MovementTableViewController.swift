@@ -68,37 +68,16 @@ public final class MovementTableViewController: ReactiveViewController<MovementT
         super.viewDidLoad()
         title = "Movements"
         navigationItem.rightBarButtonItem = createTodoButton
-
-        viewModel.pagingList.changes
-            .observe(on: UIScheduler())
-            .observeValues { (changes) in
-                self.tableView.beginUpdates()
-
-                for change in changes {
-                    switch change {
-                    case .insert(let indexPath):
-                        self.tableView.insertRows(at: [indexPath], with: .automatic)
-                    case .delete(let indexPath):
-                        self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                    case .update(let indexPath):
-                        self.tableView.reloadRows(at: [indexPath], with: .automatic)
-                    case .move(let oldIndexPath, let newIndexPath):
-                        self.tableView.moveRow(at: oldIndexPath, to: newIndexPath)
-                    }
-                }
-
-                self.tableView.endUpdates()
-        }
     }
 
     // MARK: - UITableViewDataSource
 
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.pagingList.numberOfSections
+        return 1
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.pagingList.numberOfItemsInSection(section: section)
+        return viewModel.movements.value.count
     }
 
     // MARK: - UITableViewDelegate
@@ -106,9 +85,9 @@ public final class MovementTableViewController: ReactiveViewController<MovementT
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovementTableIdentifier.MovementCell, for: indexPath)
 
-        let movement = viewModel.pagingList.object(at: indexPath)
-
+        let movement = viewModel.movements.value[indexPath.row]
         cell.textLabel!.text = movement.name
+
         return cell
     }
 

@@ -11,7 +11,8 @@ import ReactiveSwift
 import Result
 
 public final class MovementTableViewModel: ViewModel {
-    public let pagingList: PagingList
+
+    public let movements = MutableProperty<[Movement]>([])
 
     public let createMovement: Action<(), CreateMovementViewModel, NoError>
     public let deleteMovement: Action<Movement, Bool, NoError>
@@ -19,7 +20,6 @@ public final class MovementTableViewModel: ViewModel {
     public let close: Action<(), (), NoError>
 
     public override init(services: ViewModelServicesProtocol) {
-        pagingList = MovementFetchedResultController(managedContext: services.coreDataStack.mainContext)
 
         self.createMovement = Action<(), CreateMovementViewModel, NoError> { () -> SignalProducer<CreateMovementViewModel, NoError> in
             return SignalProducer(value: CreateMovementViewModel(services: services))

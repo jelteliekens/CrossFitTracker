@@ -28,10 +28,7 @@ public final class CreateMovementViewModel: ViewModel {
             return SignalProducer<(), NoError>(value: ())
         }
 
-        createEnabled <~ self.name.producer
-            .map { (name) -> Bool in
-                return !name.isEmpty
-            }
+        createEnabled <~ self.name.producer.map { !$0.isEmpty }
 
         super.init(services: services)
     }
