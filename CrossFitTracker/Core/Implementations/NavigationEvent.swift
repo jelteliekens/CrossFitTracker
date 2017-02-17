@@ -11,20 +11,19 @@ import UIKit
 public enum NavigationEvent {
 
     public enum PushStyle {
-        case Push, Modal
+        case push, modal
     }
 
-    case Push(UIViewController, PushStyle)
-    case Pop
+    case push(UIViewController, PushStyle)
+    case pop
 
     init(_ viewModel: ViewModelProtocol) {
-
         if let vm = viewModel as? MovementTableViewModel {
-            self = .Push(MovementTableViewController(viewModel: vm), .Push)
-//        } else if let vm = viewModel as? CreateTodoViewModel {
-//            self = .Push(CreateTodoViewController(viewModel: vm), .Modal)
+            self = .push(MovementTableViewController(viewModel: vm), .push)
+        } else if let vm = viewModel as? CreateMovementViewModel {
+            self = .push(CreateMovementViewController(viewModel: vm), .modal)
         } else {
-            self = .Push(UIViewController(), .Push)
+            self = .push(UIViewController(), .push)
         }
     }
 }

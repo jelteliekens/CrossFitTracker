@@ -12,7 +12,7 @@ import Result
 
 public final class CreateMovementViewModel: ViewModel {
 
-    public let movement = MutableProperty<String>("")
+    public let name = MutableProperty<String>("")
 
     public let create: Action<String, Movement, NoError>
     public let cancel: Action<(), (), NoError>
@@ -20,18 +20,23 @@ public final class CreateMovementViewModel: ViewModel {
     public override init(services: ViewModelServicesProtocol) {
         let createEnabled = MutableProperty(false)
 
-        self.create = Action<String, Movement, NoError>(enabledIf: createEnabled) { (movement) -> SignalProducer<Movement, NoError> in
-            return services.movement.create(name: movement)
+        self.create = Action<String, Movement, NoError>(enabledIf: createEnabled) { (name) -> SignalProducer<Movement, NoError> in
+            return services.movement.create(name: name)
         }
 
         self.cancel = Action<(), (), NoError> {
             return SignalProducer<(), NoError>(value: ())
         }
 
-        createEnabled <~ self.movement.producer.map { (movement) -> Bool in
-            return !movement.isEmpty
-        }
+        createEnabled <~ self.name.producer
+            .map { (name) -> Bool in
+                return !name.isEmpty
+            }
 
         super.init(services: services)
+    }
+
+    deinit {
+        print("Deinit ViewModel")
     }
 }

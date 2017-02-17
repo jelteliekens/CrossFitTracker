@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return navigationStack.peekAtStack()
     }
 
-    fileprivate var navigationStack: [UIViewController] = []
+    fileprivate var navigationStack = [UIViewController]()
 
     lazy var coreDataStack: CoreDataStack = {
         return CoreDataStack(modelName: "CrossFitTracker")
@@ -57,27 +57,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// MARK: ViewModelServicesDelegate
+// MARK: - ViewModelServicesDelegate
 
 extension AppDelegate: ViewModelServicesDelegate {
 
     func services(_ services: ViewModelServicesProtocol, navigate: NavigationEvent) {
         DispatchQueue.main.async {
             switch navigate {
-            case .Push(let vc, let style):
+            case let .push(vc, style):
                 switch style {
-                case .Push:
+                case .push:
                     if let top = self.presenting as? UINavigationController {
                         top.pushViewController(vc, animated: true)
                     }
-                case .Modal:
+                case .modal:
                     if let top = self.presenting {
                         let navc = self.wrapNavigation(vc)
                         self.navigationStack.push(navc)
                         top.present(navc, animated: true, completion: nil)
                     }
                 }
-            case .Pop:
+            case .pop:
                 if let navc = self.presenting as? UINavigationController {
                     if navc.viewControllers.count > 1 {
                         navc.popViewController(animated: true)
@@ -93,7 +93,7 @@ extension AppDelegate: ViewModelServicesDelegate {
         }
     }
 
-    private func wrapNavigation(_ vc: UIViewController) -> UINavigationController {
+    fileprivate func wrapNavigation(_ vc: UIViewController) -> UINavigationController {
         let navc = UINavigationController(rootViewController: vc)
         navc.navigationBar.isTranslucent = false
         return navc

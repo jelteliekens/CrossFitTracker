@@ -9,11 +9,14 @@
 import UIKit
 import ReactiveSwift
 import ReactiveCocoa
+import SnapKit
 
 public final class MovementTableViewController: ReactiveViewController<MovementTableViewModel>, UITableViewDelegate, UITableViewDataSource {
 
     public let tableView = UITableView(frame: CGRect.zero, style: .plain)
     public var createTodoButton: UIBarButtonItem!
+
+    private var didSetupConstraints = false
 
     public struct MovementTableIdentifier {
         static let MovementCell = "MovementCell"
@@ -23,18 +26,42 @@ public final class MovementTableViewController: ReactiveViewController<MovementT
     public init(viewModel: MovementTableViewModel) {
         super.init(viewModel: viewModel, nibName: nil, bundle: nil)
 
-        createTodoButton = UIBarButtonItem(barButtonSystemItem: .compose,
+        createTodoButton = UIBarButtonItem(barButtonSystemItem: .add,
                                            target: self,
                                            action: #selector(self.createMovementButtonPressed))
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: MovementTableIdentifier.MovementCell)
+        tableView.register(UITableViewCell.self,
+                           forCellReuseIdentifier: MovementTableIdentifier.MovementCell)
     }
 
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    public override func loadView() {
+        super.loadView()
+        view.addSubview(tableView)
+    }
+
+    override public func updateViewConstraints() {
+        super.updateViewConstraints()
+
+        if !didSetupConstraints {
+
+            tableView.snp.makeConstraints { (make) in
+                make.edges.equalTo(self.view)
+            }
+
+            didSetupConstraints = true
+        }
+    }
+
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.setNeedsUpdateConstraints()
     }
 
     public override func viewDidLoad() {
