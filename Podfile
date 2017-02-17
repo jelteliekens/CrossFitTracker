@@ -6,6 +6,7 @@ target 'CrossFitTracker' do
   use_frameworks!
 
   pod 'ReactiveCocoa', '~> 5.0.0'
+  pod 'ReactiveSwift', :git => 'https://github.com/ReactiveCocoa/ReactiveSwift.git', :branch => 'signal-deadlock-fix'
   pod 'Alamofire', '~> 4.0'
   pod 'SnapKit', '~> 3.2.0'
 
