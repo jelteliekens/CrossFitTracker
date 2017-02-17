@@ -108,7 +108,7 @@ public final class MovementTableViewController: ReactiveViewController<MovementT
 
         let movement = viewModel.pagingList.object(at: indexPath)
 
-        cell.textLabel!.text = movement.title
+        cell.textLabel!.text = movement.name
         return cell
     }
 
@@ -118,8 +118,8 @@ public final class MovementTableViewController: ReactiveViewController<MovementT
 
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let movement = viewModel.pagingList.object(at: indexPath)
-            viewModel.deleteMovement.apply(movement).start()
+//            let movement = viewModel.pagingList.object(at: indexPath)
+//            viewModel.deleteMovement.apply(movement).start()
         }
     }
 

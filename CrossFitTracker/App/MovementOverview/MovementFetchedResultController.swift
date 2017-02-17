@@ -25,7 +25,7 @@ public protocol PagingList {
 
     func numberOfItemsInSection(section: Int) -> Int
 
-    func object(at indexPath: IndexPath) -> Movement
+    func object(at indexPath: IndexPath) -> PersistedMovement
 }
 
 public final class MovementFetchedResultController: NSObject, PagingList {
@@ -40,12 +40,12 @@ public final class MovementFetchedResultController: NSObject, PagingList {
 
     fileprivate let managedContext: NSManagedObjectContext
 
-    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Movement> = {
-        let fetchRequest: NSFetchRequest<Movement> = Movement.fetchRequest()
-        let sort = NSSortDescriptor(key: #keyPath(Movement.title), ascending: true)
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<PersistedMovement> = {
+        let fetchRequest: NSFetchRequest<PersistedMovement> = PersistedMovement.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(PersistedMovement.name), ascending: true)
         fetchRequest.sortDescriptors = [sort]
 
-        let fetchedResultsController = NSFetchedResultsController<Movement>(
+        let fetchedResultsController = NSFetchedResultsController<PersistedMovement>(
             fetchRequest: fetchRequest,
             managedObjectContext: self.managedContext,
             sectionNameKeyPath: nil,
@@ -89,8 +89,8 @@ extension MovementFetchedResultController {
         return sectionInfo.numberOfObjects
     }
 
-    public func object(at indexPath: IndexPath) -> Movement {
-        return fetchedResultsController.object(at: indexPath) as Movement
+    public func object(at indexPath: IndexPath) -> PersistedMovement {
+        return fetchedResultsController.object(at: indexPath) as PersistedMovement
     }
 }
 

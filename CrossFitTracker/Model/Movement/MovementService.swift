@@ -27,15 +27,22 @@ public final class MovementService: MovementServiceProtocol {
     }
 
     public func create(name: String) -> SignalProducer<Movement, NoError> {
-        let movement = Movement(context: coreDataStack.mainContext)
-        movement.title = name
-        coreDataStack.saveContext()
+        let movement = Movement(id: 0, name: name)
+
+        // Begin persisting
+        let context = coreDataStack.newDerivedBackgroundContext()
+        let persisted = PersistedMovement(context: context)
+        persisted.unique = Int32(movement.id)
+        persisted.name = movement.name
+        coreDataStack.saveContext(context)
+        // End persisting
+
         return SignalProducer<Movement, NoError>(value: movement)
     }
 
     public func delete(movement: Movement) -> SignalProducer<Bool, NoError> {
-        coreDataStack.mainContext.delete(movement)
-        coreDataStack.saveContext()
+//        coreDataStack.mainContext.delete(movement)
+//        coreDataStack.saveContext()
         return SignalProducer<Bool, NoError>(value: true)
     }
 }
